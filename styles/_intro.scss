@@ -1,0 +1,125 @@
+.main-head {
+ width: 95%;
+margin: 0 0 0 auto;
+}
+
+nav {
+    @include flex(space-between,center,row);
+    min-height: 10vh;
+    width:50%;
+    flex-wrap:wrap;
+    .logo {
+        @include flex(flex-start,center,row);
+        flex: 1 1 10rem;
+    }
+    ul {
+        @include flex(space-around,cetner,row);
+        flex:1 1 40rem;
+    }
+    h1 {
+        margin-left: 2rem;
+    }
+}
+
+.intro {
+    min-height:90vh;
+    width:90%;
+    margin:auto;
+    @include flex(space-between,center,row);
+    flex-wrap:wrap;
+    h2 {
+        font-size:8rem;
+        padding-top:2rem;
+        background:$gradient;
+        background-clip: text;
+        display: inline-block;
+        -webkit-text-fill-color:transparent;
+    }
+    h3 {
+        padding:2rem 0rem;
+        font-size:6rem;
+    }
+    p {
+        padding-top: 2rem;
+        color: $gray-text;
+    }
+}
+.intro-social {
+    margin-top:4rem;
+    a {
+        margin-right:5rem;
+    }
+}
+
+.splash {
+    position: absolute;
+    top:0;
+    right:0;
+    height:100%;
+    z-index:-1
+}
+.active {
+    background-color: $gray-text;
+    color:white;
+    border-radius:2rem;
+    padding:1rem 3rem;
+}
+.intro-text,.intro-image {
+    flex:1 1 40rem;
+}
+
+// Animations
+#plant-left {
+    animation: plant 3s linear infinite alternate;
+    transform-origin:bottom;
+    transform-box:fill-box ;
+}
+
+#plant-right {
+    animation: plant-half 2.5s linear infinite alternate 1s;
+    transform-origin:bottom;
+    transform-box:fill-box ;
+}
+#me {
+    animation: me 2s linear infinite alternate;
+    transform-origin:bottom;
+}
+#clock-arrow {
+    animation: clock 6s linear infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+@keyframes plant {
+    from {
+        transform: rotatez(-45deg);
+    }
+    to {
+        transform: rotatez(45deg);
+    }
+}
+@keyframes plant-half {
+    from {
+        transform: rotatez(-55deg);
+    }
+    to {
+        transform: rotatez(0deg);
+    }
+}
+
+@keyframes me {
+    from {
+        transform: rotatex(0deg);
+    }
+    to {
+        transform: rotatex(15deg);
+    }
+}
+
+@keyframes clock {
+    from {
+        transform: rotatez(0deg);
+    }
+    to {
+        transform: rotatez(360deg);
+    }
+}

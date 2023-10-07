@@ -1,0 +1,79 @@
+@import 'global';
+@import 'intro';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+@media screen and (max-width:1332px) {
+    html {
+        font-size:53%;
+    }
+    .splash {
+        display: none;
+    }
+    svg {
+        width: 80%;
+    }
+    nav {
+        width:100%;
+    }
+}
+
+@media screen and (max-width:754px) {
+    html {
+        font-size:45%
+    }
+    svg{
+        height: 60%;
+    }
+    .main-head {
+        width:100%;
+    }
+    nav{
+        .logo {
+            @include flex(center,center,row);
+            flex:1 1 20rem;
+            margin-top:2rem
+        }
+        ul {
+            flex:1 1 90rem;
+            margin:2rem 0rem;
+        }
+    }
+    .intro-text {
+        margin-top:5rem;
+        text-align:center;
+    }
+    .intro-image {
+        text-align:center;
+    }
+    .intro-social {
+        @include flex(center,center,row);
+        a{
+            margin:2rem;
+        }
+    }
+    .projects {
+        @include flex(center,flex-start,column);
+        img {
+            width: 100%;
+            max-height: 100%;
+        }
+    }
+    .elena,.travelly{
+        flex:1 1 50rem;
+    }
+    form {
+        padding:0rem;
+        width:100%;
+    }
+    
+    footer {
+        h4 {
+            order:2;
+            padding:1rem;
+        }
+        ul {
+            order:1
+        }
+    }
+}

@@ -1,0 +1,17 @@
+footer {
+    @include flex(flex-start,center,row);
+    flex-wrap: wrap;
+    min-height: 10vh;
+    text-align: center;
+    background-color:$background-color;
+    color:white;
+    h4 {
+        padding-left:5%;
+        flex:1 1 40rem;
+    }
+    ul {
+        padding-top: 2rem;
+        @include flex(space-around,center,row);
+        flex:1 1 40rem;
+    }
+}
